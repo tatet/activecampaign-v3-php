@@ -96,7 +96,7 @@ class Contacts extends Resource
      * @param array $contact
      * @return string
      */
-    public function update(int $id, array $contact)
+    public function update($id, array $contact)
     {
         $req = $this->client
             ->getClient()
@@ -190,7 +190,7 @@ class Contacts extends Resource
      * @param int $offset
      * @return string
      */
-    public function listAll(array $query_params = [], int $limit = 20, int $offset = 0)
+    public function listAll(array $query_params = [], $limit = 10, $offset = 0)
     {
         $query_params = array_merge($query_params, [
             'limit' => $limit,
@@ -322,5 +322,4 @@ class Contacts extends Resource
 
         return 200 === $req->getStatusCode();
     }
-
 }
