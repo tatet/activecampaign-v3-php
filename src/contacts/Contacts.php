@@ -149,7 +149,7 @@ class Contacts extends Resource
      * @param int $tag_id
      * @return string
      */
-    public function tag(int $id, int $tag_id)
+    public function tag($id, $tag_id)
     {
         $req = $this->client
             ->getClient()
