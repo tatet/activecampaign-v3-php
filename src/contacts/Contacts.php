@@ -322,4 +322,24 @@ class Contacts extends Resource
 
         return 200 === $req->getStatusCode();
     }
+
+    /**
+     * Add contact to an automation
+     * @see https://developers.activecampaign.com/reference/create-new-contactautomation
+     * @param int $contactId
+     * @param int $automationId
+     * @return bool
+     */
+    public function addAutomation(int $contactId, int $automationId)
+    {
+        $req = $this->client
+            ->getClient()
+            ->post('/api/3/contactAutomation', [
+                'json' => [
+                    'contactAutomation' => ["contact" => $contactId, "automation" => $automationId]
+                ]
+            ]);
+
+        return 200 === $req->getStatusCode();
+    }
 }
