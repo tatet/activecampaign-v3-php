@@ -330,7 +330,7 @@ class Contacts extends Resource
      * @param int $automationId
      * @return bool
      */
-    public function addAutomation(int $contactId, int $automationId)
+    public function addAutomation($contactId, $automationId)
     {
         $req = $this->client
             ->getClient()
