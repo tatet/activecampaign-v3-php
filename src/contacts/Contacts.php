@@ -334,7 +334,7 @@ class Contacts extends Resource
     {
         $req = $this->client
             ->getClient()
-            ->post('/api/3/contactAutomation', [
+            ->post('/api/3/contactAutomations', [
                 'json' => [
                     'contactAutomation' => ["contact" => $contactId, "automation" => $automationId]
                 ]
