@@ -116,7 +116,7 @@ class Contacts extends Resource
      * @param int $id
      * @return string
      */
-    public function delete(int $id)
+    public function delete($id)
     {
         $req = $this->client
             ->getClient()
